@@ -1,0 +1,73 @@
+/*  ---------- RESET CSS --------------- */
+* {margin:0;padding:0;border:none;box-sizing:border-box;text-decoration:none;}
+
+#mainConteiner {
+  background-image:linear-gradient(to right top, #0005cc, #8900dd, #ffaa00);
+  width: 86%;
+  max-width: 1024px;
+  min-width: 360px;
+  height: auto;
+  margin: 0px auto;
+  padding: 12px 8px;
+}
+
+form, fieldset {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+form fieldset {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 5px auto;
+  padding: 5px;
+  font-family: sans serif;
+  color: #fff;
+
+}
+  
+form input, form label {
+  display:block;
+  width: 90%;
+  max-width:400px;
+  line-height: 2.0rem;
+  border-radius: 0.4rem;
+  text-align:center;
+  font-size: 1.2rem;
+  margin: 5px auto;
+  padding: 3px 10px;
+  
+}
+
+.buttons {
+  display:block;
+  line-height: 3.5rem;
+  background-color: rgba(255, 255, 0, 0.8);
+  border: 1px solid #ff0;
+  width: 80%;
+  min-width: 230px;
+  border-radius: 0.6rem;
+  text-align:center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px auto;
+  padding: 5px 30px;
+
+}
+
+.conteinerButtons {
+  width:80%;
+  height: auto;
+  margin: 30px auto;
+}
+
+button[type=submit]:hover {
+  background-color: #0b0;
+  color:#fff;
+}
+
+button[type=reset]:hover {
+  background-color: #f00;
+  color:#fff;
+}

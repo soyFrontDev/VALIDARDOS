@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleform.css">
+    <title>Modelo de Form para validacao de dados</title>
+</head>
+<body>
+    <div id="mainConteiner">
+        <form name="formValid" method="GET">
+          <!-- Campos de Coleta e Validação de Contato de LEAD -->
+          <fieldset id="validEmail"><legend>Validar Contato</legend>
+            <label for="usernameId" class="labelFocus">Nome
+            <input type="text" name="username" id="usernameId" maxlength="25" ></label>
+            <label for="userlastnameid" class="labelFocus">SobreNome
+            <input type="text" name="userlastname" id="userlastnameId" placeholder="Digite seu Segundo Nome" ></label>
+            <label for="usermailId" class="labelFocus">Email
+            <input type="email" name="userMail" id="usermailId" placeholder="Digite seu Email" ></label>
+            <label for="userContact" class="labelFocus">Contato
+            <input type="tel" id="userphoneId" name="userPhone" maxlenght="16" placeholder="Celular/Mobile" pattern="/[1-9]{2}\s[1-9]{2}\s ^[9,0-9]{5}\-[0-9]{4}/"></label>
+            <div class="conteinerButtons">
+              <button type="submit" class="btn-submit, buttons" onclick="leadOrUser()" formaction="validarLead.php">Validar</button>
+              <button type="reset" class="btn-reset, buttons">Limpar</button>
+            </div>
+          </fieldset>
+          
+          <!-- Campos de Coleta de Informações Pessoais (restricted) do Novo Usuário -->
+          <fieldset id="personalInfo"><legend>Dados Pessoais</legend>
+            <fieldset><legend>Genero</legend>
+              <input type="radio" name="gender" id="male" value="Masculino"><label for="male" class="labelFocus">Masculino</label>
+              <input type="radio" name="gender" id="female" value="Feminino"><label for="female" class="labelFocus">Feminino</label>
+              <input type="radio" name="gender" id="Other" value="Other"><label for="Other" class="labelFocus">Outro</label>
+            </fieldset> 
+            <fieldset><legend>Civil Status</legend>
+              <input type="radio" name="civilStatus" id="Married" value="Casado"><label for="Married" class="labelFocus">Casado</label>
+              <input type="radio" name="civilStatus" id="Not-Married" value="solteiro"><label for="Not-Married" class="labelFocus">Solteiro</label>
+              <input type="radio" name="civilStatus" id="windower" value="viúvo"><label for="windower" class="labelFocus">Viúvo</label>
+            </fieldset>
+            <label for="birthDateId" class="labelFocus">Data de Nascimento
+            <input type="date" id="birthDateId" name="birthDate" ></label>
+        </fieldset>
+        
+          <!-- Campos de Coleta de Endereço do Novo Usuário -->
+        <fieldset id="userAdressId"><legend>Endereço</legend>
+          
+            <label for="userLocationId" class="labelFocus">Endereço
+            <input type="text" name="userLocation" id="userLocationId" placeholder="Digite nome da Rua/Avenida/viela"></label>
+          
+            <label for="userNumberHouse" class="labelFocus">Numero
+            <input type="text" name="userNumberHouse" id="userNumberHouseId" placeholder="Digite o numero do seu endereço" pattern="^[1-9]{1,5}"></label>
+              <label for="userDistrictId">Bairro<input type="text" name="userDistrict" id="userDistrictId" placeholder="Seu Bairro/Vila/Setor" maxlength="40"></label>
+          <label for="userCEP">CEP<input type="text" name="userCEP" id="userCEPId" pattern="[0-9]{8}"></label>
+              <label for="userCity">Cidade<input type="text" name="userCity" id="userCityId" placeholder="Sua Cidade"></label>
+          <div class="conteinerButtons">
+            <button type="submit" class="btn-submit, buttons" formaction="cadastroUser.php">Cadastrar</button>
+            <button type="reset" class="btn-reset, buttons">Limpar</button>
+          </div>
+        </fieldset>
+        </form>
+        <script src="inputValid.js">
+            
+        </script>
+         
+       </div>
+    
+</body>
+</html>
